@@ -43,7 +43,7 @@ export default (app, options = {}) => {
 
     [`SERVICES_AUTHENTICATION_AUTHENTICATE_${opts.FULFILLED}`]: (state, action) => {
       debug(`redux:SERVICES_AUTHENTICATION_AUTHENTICATE_${opts.FULFILLED}`, action);
-      const user = action.payload.data;
+      const user = action.payload.user;
 
       if (state.ignorePendingAuth) {
         // A logout was dispatched between the authentication being started and completed
